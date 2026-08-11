@@ -1,8 +1,7 @@
 package br.com.gabriel.ecommerce.controller;
 
 import br.com.gabriel.ecommerce.model.Cliente;
-import br.com.gabriel.ecommerce.service.IClienteService;
-import jakarta.persistence.criteria.CriteriaBuilder;
+import br.com.gabriel.ecommerce.service.cliente.IClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

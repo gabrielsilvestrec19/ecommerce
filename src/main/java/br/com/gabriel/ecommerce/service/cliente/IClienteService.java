@@ -1,4 +1,4 @@
-package br.com.gabriel.ecommerce.service;
+package br.com.gabriel.ecommerce.service.cliente;
 
 import br.com.gabriel.ecommerce.model.Cliente;
 
