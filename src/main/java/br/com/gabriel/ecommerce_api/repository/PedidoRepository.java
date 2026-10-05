@@ -10,7 +10,6 @@ import java.util.Optional;
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
     List<Pedido> findByClienteId (Long clienteId);
-    List<Pedido> findByClienteNome (String clienteNome);
     List<Pedido> findByClienteNomeContainingIgnoreCase(String clienteNome);
     List<Pedido> findAllByStatus (StatusPedido status);
 }
