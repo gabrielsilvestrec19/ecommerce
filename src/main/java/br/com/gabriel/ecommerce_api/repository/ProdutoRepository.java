@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
 
-    List<Produto> findAllByCategoriaNome(String nomeCategoria);
+    List<Produto> findAllByCategoriaNomeContainingIgnoreCase(String nomeCategoria);
     List<Produto> findAllByCategoriaId(Long idCategoria);
     List<Produto> findByPrecoBetween(BigDecimal valorMenor, BigDecimal valorMaior);
     List<Produto> findByNomeContainingIgnoreCase(String nome);
