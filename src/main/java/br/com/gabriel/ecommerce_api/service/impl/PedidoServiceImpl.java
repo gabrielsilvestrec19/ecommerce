@@ -156,6 +156,7 @@ public class PedidoServiceImpl implements PedidoService {
     }
 
     @Override
+    @Transactional
     public PedidoResponseDTO atualizarStatus(Long id, StatusPedido status) {
         Optional<Pedido> pedidoOptional = pedidoRepository.findById(id);
         if(pedidoOptional.isEmpty()){
@@ -231,6 +232,7 @@ public class PedidoServiceImpl implements PedidoService {
     }
 
     @Override
+    @Transactional
     public void deletar(Long id) {
         Optional<Pedido> pedidoOptional = pedidoRepository.findById(id);
         if (pedidoOptional.isEmpty()){
