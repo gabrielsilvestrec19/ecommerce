@@ -9,7 +9,7 @@ public interface ProdutoService {
     ProdutoResponseDTO buscarPorId(Long id);
     List<ProdutoResponseDTO> listarTodos ();
     List<ProdutoResponseDTO> buscarPorNomeCategoria(String nomeCategoria);
-    List<ProdutoResponseDTO> buscarPorIdCategoria (Long id);
+    List<ProdutoResponseDTO> buscarPorIdCategoria (Integer id);
     List<ProdutoResponseDTO> buscarPorFaixaDePreco (BigDecimal valorMenor, BigDecimal valorMaior);
     List<ProdutoResponseDTO> buscarPorNome (String nome);
     ProdutoResponseDTO salvar (ProdutoRequestDTO dto);

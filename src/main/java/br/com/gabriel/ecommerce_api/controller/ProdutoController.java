@@ -50,7 +50,7 @@ public class ProdutoController {
         return ResponseEntity.ok(prod);
     }
     @GetMapping("/categoria/{id}")
-    public ResponseEntity<List<ProdutoResponseDTO>> buscaPorIdCategoria(@PathVariable Long id){
+    public ResponseEntity<List<ProdutoResponseDTO>> buscaPorIdCategoria(@PathVariable Integer id){
         List<ProdutoResponseDTO> prod = produtoService.buscarPorIdCategoria(id);
         return ResponseEntity.ok(prod);
     }

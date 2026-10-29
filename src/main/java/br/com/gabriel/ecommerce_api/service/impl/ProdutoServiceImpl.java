@@ -59,7 +59,7 @@ public class ProdutoServiceImpl implements ProdutoService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<ProdutoResponseDTO> buscarPorIdCategoria(Long id) {
+    public List<ProdutoResponseDTO> buscarPorIdCategoria(Integer id) {
         List<Produto> produtos = produtoRepository.findAllByCategoriaId(id);
         List<ProdutoResponseDTO> produtosDto = new ArrayList<>();
         for (Produto prod : produtos){

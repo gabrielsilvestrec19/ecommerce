@@ -23,7 +23,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 
     @Override
     @Transactional(readOnly = true)
-    public CategoriaResponseDTO buscarPorId(Long id) {
+    public CategoriaResponseDTO buscarPorId(Integer id) {
         Optional<Categoria> categoriaOptional = categoriaRepository.findById(id);
         if (categoriaOptional.isEmpty()) {
             throw new RuntimeException("A categoria de id: " + id + " não existe.");
@@ -62,7 +62,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 
     @Override
     @Transactional
-    public CategoriaResponseDTO atualizar(Long id, CategoriaRequestDTO dto) {
+    public CategoriaResponseDTO atualizar(Integer id, CategoriaRequestDTO dto) {
         Optional<Categoria> categoriaOptional = categoriaRepository.findById(id);
         if (categoriaOptional.isEmpty()) {
             throw new RuntimeException("A categoria de id: " + id + " não existe.");
@@ -75,7 +75,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 
     @Override
     @Transactional
-    public void deletar(Long id) {
+    public void deletar(Integer id) {
         Optional<Categoria> categoriaOptional = categoriaRepository.findById(id);
         if (categoriaOptional.isEmpty()) {
             throw new RuntimeException("A categoria de id: " + id + " não existe.");

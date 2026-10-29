@@ -8,9 +8,9 @@ import java.util.List;
 public interface CategoriaService {
     List<CategoriaResponseDTO> listarTodos();
     CategoriaResponseDTO buscarPeloNome(String nome);
-    CategoriaResponseDTO buscarPorId(Long id);
+    CategoriaResponseDTO buscarPorId(Integer id);
     CategoriaResponseDTO salvar (CategoriaRequestDTO dto);
-    CategoriaResponseDTO atualizar (Long id, CategoriaRequestDTO dto);
-    void deletar (Long id);
+    CategoriaResponseDTO atualizar (Integer id, CategoriaRequestDTO dto);
+    void deletar (Integer id);
     void deletarPeloNome (String nome);
 }

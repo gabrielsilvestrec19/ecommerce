@@ -24,7 +24,7 @@ public class CategoriaController {
     }
     @PutMapping("/{id}")
     public ResponseEntity<CategoriaResponseDTO> atualiza(@RequestBody CategoriaRequestDTO categoriaRequestDTO,
-                                                         @PathVariable Long id){
+                                                         @PathVariable Integer id){
         CategoriaResponseDTO categoriaResponseDTO = categoriaService.atualizar(id,categoriaRequestDTO);
         return ResponseEntity.ok(categoriaResponseDTO);
     }
@@ -34,7 +34,7 @@ public class CategoriaController {
         return ResponseEntity.ok(categoriaResponseDTO);
     }
     @GetMapping("/{id}")
-    public  ResponseEntity<CategoriaResponseDTO> buscaPorId(@PathVariable Long id){
+    public  ResponseEntity<CategoriaResponseDTO> buscaPorId(@PathVariable Integer id){
         CategoriaResponseDTO categoria = categoriaService.buscarPorId(id);
         return ResponseEntity.ok(categoria);
     }
@@ -44,7 +44,7 @@ public class CategoriaController {
         return ResponseEntity.ok(categoria);
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletaPorId (@PathVariable Long id){
+    public ResponseEntity<Void> deletaPorId (@PathVariable Integer id){
         categoriaService.deletar(id);
         return ResponseEntity.noContent().build();
     }
