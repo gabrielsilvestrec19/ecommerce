@@ -1,5 +1,4 @@
 package br.com.gabriel.ecommerce_api.mapper;
-
 import br.com.gabriel.ecommerce_api.dto.CategoriaRequestDTO;
 import br.com.gabriel.ecommerce_api.dto.CategoriaResponseDTO;
 import br.com.gabriel.ecommerce_api.entity.Categoria;
